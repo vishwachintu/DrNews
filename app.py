@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='DrNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
+st.set_page_config(page_title='DrNews📰: AI Summarised News Portal', page_icon='./Media/newspaper.ico')
 
 #Add the expander to provide some information about the app
 with st.sidebar.expander("About the DrNews App"):
@@ -71,7 +71,7 @@ def fetch_news_poster(poster_link):
         image = Image.open(io.BytesIO(raw_data))
         st.image(image, use_column_width=True)
     except:
-        image = Image.open('./Meta/no_image.jpg')
+        image = Image.open('./Media/no_image.jpg')
         st.image(image, use_column_width=True)
 
 
@@ -102,7 +102,7 @@ def display_news(list_of_news, news_quantity):
 def run():
     st.title("DrNews 📰")
     st.header("AI generated Summarised News for your daily updated")
-    image = Image.open('./Meta/drpinnacle.png')
+    image = Image.open('./Media/drpinnacle.png')
 
     col1, col2, col3 = st.columns([3, 5, 3])
 
